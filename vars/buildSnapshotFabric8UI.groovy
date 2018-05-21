@@ -25,10 +25,11 @@ def call(body) {
     sh "cd fabric8-ui && npm install ${runtimeDir}/*0.0.0-development.tgz"
     sh '''
         export FABRIC8_WIT_API_URL="https://api.prod-preview.openshift.io/api/"
-        export FABRIC8_RECOMMENDER_API_URL="https://recommender.prod-preview.api.openshift.io"
         export FABRIC8_FORGE_API_URL="https://forge.api.prod-preview.openshift.io"
         export FABRIC8_SSO_API_URL="https://sso.prod-preview.openshift.io/"
         export FABRIC8_AUTH_API_URL="https://auth.prod-preview.openshift.io/api/"
+        export ANALYTICS_RECOMMENDER_URL="https://recommender.api.prod-preview.openshift.io/"
+        export ANALYTICS_LICENSE_URL="https://license-analysis.api.prod-preview.openshift.io/"
         
         export OPENSHIFT_CONSOLE_URL="https://console.free-stg.openshift.com/console/"
         export WS_K8S_API_SERVER="f8osoproxy-test-dsaas-preview.b6ff.rh-idev.openshiftapps.com:443"
